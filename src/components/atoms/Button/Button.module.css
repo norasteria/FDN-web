@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.button:focus-visible{
+    outline: unset;
+}
+
 .button-primary {
     background-color: #db284e;
     color: white;
