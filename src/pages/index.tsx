@@ -41,7 +41,6 @@ const TOP_BRAND_DATA: StaticImageData[] = [
 ];
 
 const Home: NextPage = () => {
-  console.log("API URL: ", process.env.API_URL);
   return (
     <HomeWrapper>
       <HomeHeader />
@@ -156,5 +155,12 @@ const Home: NextPage = () => {
     </HomeWrapper>
   );
 };
+
+export async function getServerSideProps() {
+  console.log("API_URL: ", process.env.API_URL);
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}
 
 export default Home;
