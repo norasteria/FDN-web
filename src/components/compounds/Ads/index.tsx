@@ -18,7 +18,7 @@ const AdsBox: React.VFC<AdsBoxProps> = ({
   return (
     <div {...props} className={styles.ads} style={{ ...style, height, width }}>
       <div className={styles["ads-content"]}>
-        <span>{text + ` ${width}x${height}`}</span>
+        <span>{text}</span>
         <span>{description}</span>
       </div>
     </div>

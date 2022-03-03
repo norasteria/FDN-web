@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { ImageProps } from "next/image";
 
 export interface ImageSpritesProps extends Omit<ImageProps, "src"> {
-  source: string;
+  source: StaticImageData;
   positionX?: number;
   positionY?: number;
 }

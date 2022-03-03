@@ -6,8 +6,7 @@
     padding: 10px 30px 10px 20px;
     display: flex;
     flex: 1;
-    border: 0 solid #E5E5E5 ;
-    border-bottom-width: 1px;
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .header-logo {
