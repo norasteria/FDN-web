@@ -40,8 +40,7 @@ const TOP_BRAND_DATA: StaticImageData[] = [
   innisfreeImg,
 ];
 
-const Home: NextPage = (props) => {
-  console.log({ props });
+const Home: NextPage = () => {
   return (
     <HomeWrapper>
       <HomeHeader />
@@ -60,7 +59,9 @@ const Home: NextPage = (props) => {
       />
       <ConntentWrapper>
         <Section title="Editor's Choise" subtitle="Curated with love" />
-        {/* EDITOR'S CHOISE DATA */}
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          {/* editor's card */}
+        </div>
       </ConntentWrapper>
       <Image src={bannerImage} alt="female daily ads banner" />
       <AdsBox
@@ -157,12 +158,12 @@ const Home: NextPage = (props) => {
   );
 };
 
-export async function getServerSideProps() {
-  return {
-    props: {
-      url: process.env.API_URL,
-    }, // will be passed to the page component as props
-  };
-}
+// export async function getServerSideProps() {
+//   return {
+//     props: {
+//       url: process.env.API_URL,
+//     },
+//   };
+// }
 
 export default Home;
