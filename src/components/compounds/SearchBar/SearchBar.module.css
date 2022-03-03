@@ -1,0 +1,18 @@
+.search-wrapper {
+    border: 1px solid #EFEFEF ;
+    border-radius: 2px;
+    padding: 5px;
+    flex: 1;
+    align-items: center;
+    display: flex;
+}
+
+.search-input{
+    flex-grow: 1;
+    border: 0;
+    padding-left: 12px;
+}
+
+.search-input:focus-visible{
+    outline: none;
+}

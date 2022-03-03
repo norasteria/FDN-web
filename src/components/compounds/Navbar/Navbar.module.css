@@ -1,0 +1,19 @@
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #EFEFEF;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.navbar-item {
+    padding-right: 30px;
+    font-weight: 600;
+}
+
+.navbar-item:last-child{
+    padding: 0;
+}
+

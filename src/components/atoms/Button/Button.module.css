@@ -1,0 +1,16 @@
+.button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.button-primary {
+    background-color: #db284e;
+    color: white;
+}
+
+.button-primary-text {
+    color: #db284e;
+}

@@ -1,0 +1,29 @@
+.section-wrapper {
+    font-size: 1rem;
+    padding: 35px 0;
+}
+
+.section-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: unset;
+}
+
+.section-title {
+    font-weight: 600;
+}
+
+.section-subtitle-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-subtitle {
+    color: #9d9d9d;
+    margin: 0;
+}
+
+.section-more-icon {
+    padding-left: 25px;
+}
