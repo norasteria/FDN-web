@@ -41,6 +41,7 @@ const TOP_BRAND_DATA: StaticImageData[] = [
 ];
 
 const Home: NextPage = () => {
+  console.log("API URL: ", process.env.API_URL);
   return (
     <HomeWrapper>
       <HomeHeader />
