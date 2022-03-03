@@ -40,7 +40,8 @@ const TOP_BRAND_DATA: StaticImageData[] = [
   innisfreeImg,
 ];
 
-const Home: NextPage = () => {
+const Home: NextPage = (props) => {
+  console.log({ props });
   return (
     <HomeWrapper>
       <HomeHeader />
@@ -157,9 +158,10 @@ const Home: NextPage = () => {
 };
 
 export async function getServerSideProps() {
-  console.log("API_URL: ", process.env.API_URL);
   return {
-    props: {}, // will be passed to the page component as props
+    props: {
+      url: process.env.API_URL,
+    }, // will be passed to the page component as props
   };
 }
 
