@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 
 import HomeWrapper from "_pages/partials/home/wrapper";
 import HomeHeader from "_pages/partials/home/header";
@@ -21,6 +22,7 @@ import theBodyShopImg from "_images/the-body-shop.png";
 import skIIImg from "_images/sk-ii.png";
 import maybellineImg from "_images/maybelline.png";
 import innisfreeImg from "_images/innisfree.png";
+import { RootState } from "_services/rootReducers";
 
 const HOME_MENUS: MenuData[] = [
   { text: "SKINCARE" },
@@ -43,6 +45,9 @@ const TOP_BRAND_DATA: StaticImageData[] = [
 ];
 
 const Home: NextPage = () => {
+  const { test } = useSelector((state: RootState) => state.dashboard);
+  console.log({ test });
+
   return (
     <HomeWrapper>
       <HomeHeader />
@@ -162,6 +167,7 @@ const Home: NextPage = () => {
 
 export async function getServerSideProps() {
   store.dispatch(getDashboardDataAsyncType());
+
   return {
     props: {},
   };
