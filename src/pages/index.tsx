@@ -11,6 +11,8 @@ import Section from "_components/compounds/Section";
 import bannerImage from "_images/banner.png";
 import style from "_pages/index.module.css";
 import Footer from "_pages/partials/home/footer";
+import store from "_services/store";
+import { getDashboardDataAsyncType } from "_services/app/type";
 
 // BRANDS
 import niveaImg from "_images/nivea.png";
@@ -158,12 +160,11 @@ const Home: NextPage = () => {
   );
 };
 
-// export async function getServerSideProps() {
-//   return {
-//     props: {
-//       url: process.env.API_URL,
-//     },
-//   };
-// }
+export async function getServerSideProps() {
+  store.dispatch(getDashboardDataAsyncType());
+  return {
+    props: {},
+  };
+}
 
 export default Home;
