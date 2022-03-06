@@ -13,7 +13,6 @@ import ArticleThumbnail from "_components/compounds/ArticleThumnail";
 import type { ProductCardProps } from "_components/compounds/ProductCard";
 import ProductCard from "_components/compounds/ProductCard";
 import ReviewCard from "_components/compounds/ReviewCard";
-import bannerImage from "_images/banner.png";
 import Head from "_components/containers/Head";
 import HomeHeader from "_components/compounds/Header";
 import style from "_pages/index.module.css";
@@ -145,7 +144,6 @@ const Home: NextPage<HomePageProps> = ({ dashboard }) => {
       </ContentWrapper>
 
       <Banner />
-      {/* <Image src={bannerImage} alt="female daily ads banner" /> */}
 
       <AdsBox
         text="Horizontal 970x250"
