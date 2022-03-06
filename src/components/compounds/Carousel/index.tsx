@@ -20,7 +20,7 @@ const Carousel = <TData,>({
 }: CarouselProps<TData>): React.ReactElement => {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [position, setPosition] = useState(0);
-  const carouselItemRef = useRef<LegacyRef<HTMLDivElement>>(null);
+  const carouselItemRef = useRef<HTMLDivElement>(null);
 
   const changePage = useCallback(
     (page: number) => {
