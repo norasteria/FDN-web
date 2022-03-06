@@ -13,3 +13,65 @@
     display: flex;
     justify-content: space-between;
 }
+
+.latest-video-row {
+    display: grid;
+    row-gap: 14px;
+    grid-template-columns: auto auto auto;
+    column-gap: 30px;
+}
+
+.thumbnail:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.popular-group-card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-group-card {
+    padding: 30px;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    box-shadow: -5px 5px 10px #f2f2f2;
+    max-width: 260px;
+}
+
+.popular-group-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.popular-group-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.popular-group-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popular-group-menu-item {
+    width: 25px;
+    height: 15px;
+    position: relative;
+}
+
+.popular-group-description {
+    text-align: center;
+    margin:0;
+    margin-top: 15px;
+}

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { useCallback } from "react";
+import classNames from "classnames";
 
 import AdsBox from "_components/compounds/Ads";
 import Navbar from "_components/compounds/Navbar";
@@ -21,6 +22,9 @@ import { DashboardDataState } from "_services/app/reducers";
 import Carousel from "_components/compounds/Carousel";
 import { LatestReview } from "_services/app/dto";
 import { grouppedArray } from "_helpers/array";
+import personIcon from "_icons/person.png";
+import chatIcon from "_icons/chat.png";
+import otherMenuIcon from "_icons/other-menu.png";
 
 // BRANDS
 import niveaImg from "_images/nivea.png";
@@ -30,6 +34,17 @@ import skIIImg from "_images/sk-ii.png";
 import maybellineImg from "_images/maybelline.png";
 import innisfreeImg from "_images/innisfree.png";
 import dummyAvatar from "_images/dummy-avatar.png";
+
+// VIDEO THUMBNAILS
+import thumbnail1Img from "_images/videoThumbnail/thumbnail-1.png";
+import thumbnail2Img from "_images/videoThumbnail/thumbnail-2.png";
+import thumbnail3Img from "_images/videoThumbnail/thumbnail-3.png";
+
+// POPULAR GROUPS
+import group1Img from "_images/popularGroup/group-1.png";
+import group2Img from "_images/popularGroup/group-2.png";
+import group3Img from "_images/popularGroup/group-3.png";
+import group4Img from "_images/popularGroup/group-4.png";
 
 const HOME_MENUS: MenuData[] = [
   { text: "SKINCARE" },
@@ -49,6 +64,13 @@ const TOP_BRAND_DATA: StaticImageData[] = [
   skIIImg,
   maybellineImg,
   innisfreeImg,
+];
+
+const POPULAR_GROUPS_DATA: StaticImageData[] = [
+  group1Img,
+  group2Img,
+  group3Img,
+  group4Img,
 ];
 
 export interface HomePageProps {
@@ -170,24 +192,85 @@ const Home: NextPage<HomePageProps> = ({ dashboard }) => {
             style={{ margin: 0 }}
           />
         </div>
+
         <Section
           title="Popular Groups"
           subtitle="Where the beauty TALK are"
           more
         />
-        {/* local data */}
+
+        <div className={style["popular-group-card-container"]}>
+          {POPULAR_GROUPS_DATA.map((image, index) => (
+            <div key={index} className={style["popular-group-card"]}>
+              <div className={style["popular-group-img"]}>
+                <Image
+                  src={image}
+                  alt="popular group"
+                  objectFit="contain"
+                  layout="fill"
+                />
+              </div>
+              <div className={style["popular-group-card-title"]}>
+                <span>Embrace the Curl</span>
+              </div>
+
+              <div className={style["popular-group-menu"]}>
+                <div className={style["popular-group-menu-item"]}>
+                  <Image
+                    src={personIcon}
+                    objectFit="contain"
+                    layout="fill"
+                    alt="menu item"
+                  />
+                </div>
+                <div className={style["popular-group-menu-item"]}>
+                  <Image
+                    src={otherMenuIcon}
+                    objectFit="contain"
+                    layout="fill"
+                    alt="menu item"
+                  />
+                </div>
+                <div className={style["popular-group-menu-item"]}>
+                  <Image
+                    src={chatIcon}
+                    objectFit="contain"
+                    layout="fill"
+                    alt="menu item"
+                  />
+                </div>
+              </div>
+
+              <p className={style["popular-group-description"]}>
+                May our curls pop and never stop!
+              </p>
+            </div>
+          ))}
+        </div>
+
         <Section
           title="Latest Videos"
           subtitle="Watch and learn, ladies"
           more
         />
-        {/* local data */}
+        <div className={style["latest-video-row"]}>
+          <div className={style["thumbnail"]}>
+            <Image src={thumbnail1Img} alt="video thumbnail" />
+          </div>
+          <div className={style["thumbnail"]}>
+            <Image src={thumbnail2Img} alt="video thumbnail" />
+          </div>
+          <div className={style["thumbnail"]}>
+            <Image src={thumbnail3Img} alt="video thumbnail" />
+          </div>
+        </div>
+
         <Section
           title="Trending This Week"
           subtitle="See our weekly mots reviewed products"
           more
         />
-        {/* local data */}
+
         <Section title="Top Brands" subtitle="We all know and love" more />
         <div
           style={{
