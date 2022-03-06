@@ -23,20 +23,6 @@
     margin: 0;
 }
 
-.editor-prodict-img {
-    position: relative;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    height: 200px;
-    margin-bottom: 25px;
-}
-
-.editor-rating {
-    display: flex;
-    margin-bottom: 18px;
-}
-
 .editor-profile {
     display: flex;
     align-items: center;

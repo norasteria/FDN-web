@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { useCallback } from "react";
-import classNames from "classnames";
 
 import AdsBox from "_components/compounds/Ads";
 import Navbar from "_components/compounds/Navbar";
-import ConntentWrapper from "_components/containers/Content";
+import ContentWrapper from "_components/containers/Content";
+import Banner from "_components/compounds/Banner";
 import type { MenuData } from "_components/compounds/Navbar";
 import Section from "_components/compounds/Section";
 import EditorCard from "_components/compounds/EditorCard";
@@ -14,10 +14,10 @@ import type { ProductCardProps } from "_components/compounds/ProductCard";
 import ProductCard from "_components/compounds/ProductCard";
 import ReviewCard from "_components/compounds/ReviewCard";
 import bannerImage from "_images/banner.png";
-import HomeWrapper from "_pages/partials/home/wrapper";
-import HomeHeader from "_pages/partials/home/header";
+import Head from "_components/containers/Head";
+import HomeHeader from "_components/compounds/Header";
 import style from "_pages/index.module.css";
-import Footer from "_pages/partials/home/footer";
+import Footer from "_components/compounds/Footer";
 import store from "_services/store";
 import { getDashboardDataAsyncType } from "_services/app/type";
 import { DashboardDataState } from "_services/app/reducers";
@@ -114,7 +114,7 @@ const Home: NextPage<HomePageProps> = ({ dashboard }) => {
   );
 
   return (
-    <HomeWrapper>
+    <Head>
       <HomeHeader />
       <Navbar menus={HOME_MENUS} />
       <AdsBox
@@ -129,7 +129,7 @@ const Home: NextPage<HomePageProps> = ({ dashboard }) => {
         height={250}
         style={{ marginBottom: 30 }}
       />
-      <ConntentWrapper>
+      <ContentWrapper>
         <Section title="Editor's Choise" subtitle="Curated with love" />
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           {editorChoise?.map((data, index) => (
@@ -142,9 +142,10 @@ const Home: NextPage<HomePageProps> = ({ dashboard }) => {
             />
           ))}
         </div>
-      </ConntentWrapper>
+      </ContentWrapper>
 
-      <Image src={bannerImage} alt="female daily ads banner" />
+      <Banner />
+      {/* <Image src={bannerImage} alt="female daily ads banner" /> */}
 
       <AdsBox
         text="Horizontal 970x250"
@@ -154,7 +155,7 @@ const Home: NextPage<HomePageProps> = ({ dashboard }) => {
         style={{ marginBottom: 30, marginTop: 60 }}
       />
 
-      <ConntentWrapper>
+      <ContentWrapper>
         <Section
           title="Latest Articles"
           subtitle="So you can make better pruchase decision"
@@ -316,9 +317,9 @@ const Home: NextPage<HomePageProps> = ({ dashboard }) => {
           <br /> We are here to be your friendly solution to all things beauty,
           inside and out !
         </p>
-      </ConntentWrapper>
+      </ContentWrapper>
       <Footer />
-    </HomeWrapper>
+    </Head>
   );
 };
 

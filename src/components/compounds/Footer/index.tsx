@@ -1,6 +1,6 @@
 import Image from "next/image";
 import FDLogo from "_images/fd-logo.png";
-import styles from "_pages/partials/home/footer.module.css";
+import styles from "_components/compounds/Footer/Footer.module.css";
 import AdsBox from "_components/compounds/Ads";
 import googlePlayImg from "_images/google-play.png";
 import appStoreImg from "_images/app-store.png";

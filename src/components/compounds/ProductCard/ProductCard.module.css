@@ -1,3 +1,7 @@
+.product-card-container {
+    background-color: white;
+}
+
 .product-image {
     position: relative;
     display: flex;
@@ -10,4 +14,10 @@
 .product-rating {
     display: flex;
     margin-bottom: 18px;
+    font-size: .75rem;
+}
+
+.product-description > p {
+    margin-block: 0;
+    margin-top: 5px;
 }

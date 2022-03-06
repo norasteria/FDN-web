@@ -1,0 +1,51 @@
+.banner {
+    background-color: #fddae0;
+    height: 405px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.banner-illustration {
+    height: 405px;
+    width: 306px;
+    position: relative;
+}
+
+.banner-content {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 32px;
+}
+
+.banner-content > .highlight {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.banner-button {
+    padding: 15px 30px;
+    border-radius: 3px;
+    font-weight: 100;
+    font-size: 12px;
+    align-self: flex-end;
+}
+
+.banner-product {
+    display: flex;
+    padding: 15px 0;
+}
+
+.product {
+    border-radius: 8px;
+    margin-right: 30px;
+    padding: 15px;
+    width: 200px;
+}
+
+.product:last-child{
+    margin: 0;
+}

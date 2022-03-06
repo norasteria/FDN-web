@@ -47,3 +47,24 @@ const sampleProductData: ProductCardProps[] = [
 ];
 
 export const PRODUCT_DATA = [...sampleProductData, ...sampleProductData];
+
+export const BANNER_PRODUCT: ProductCardProps[] = [
+  {
+    name: "VAL BY VALERIE THOMAS",
+    description: "Pure Pressed Blush",
+    rating: 4.9,
+    image: valByValerieBlush,
+  },
+  {
+    name: "VAL BY VALERIE THOMAS",
+    description: "Phito Pigments Liquid Serum Foundation",
+    rating: 4.9,
+    image: juiceBeautySerum,
+  },
+  {
+    name: "VAL BY VALERIE THOMAS",
+    description: "Pure Pressed Blush",
+    rating: 4.9,
+    image: skinceuticalsSerum,
+  },
+];

@@ -5,7 +5,7 @@ import SearchBar from "_components/compounds/SearchBar";
 import menuBurgerIcon from "_icons/menu-burger.png";
 import FDLogo from "_images/fd-logo.png";
 import searchIcon from "_icons/search.png";
-import styles from "_pages/partials/home/header.module.css";
+import styles from "_components/compounds/Header/Header.module.css";
 
 const HomePageHeader: React.FC = () => {
   return (
