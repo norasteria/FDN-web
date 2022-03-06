@@ -37,6 +37,7 @@
 .banner-product {
     display: flex;
     padding: 15px 0;
+    font-size: 12px;
 }
 
 .product {
