@@ -1,0 +1,13 @@
+.product-image {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+.product-rating {
+    display: flex;
+    margin-bottom: 18px;
+}

@@ -1,9 +1,6 @@
 import Image from "next/image";
-import RatingStar from "_components/compounds/RatingStar";
 import styles from "_components/compounds/EditorCard/EditorCard.module.css";
-
-const TOTAL_RATING = 5;
-const TOTAL_VOTERS = 7;
+import ProductCard from "_components/compounds/ProductCard";
 
 export interface Product {
   name: string;
@@ -50,23 +47,12 @@ const EditorCard: React.VFC<EditorCard> = ({
       </div>
 
       <div className={styles["editor-product"]}>
-        <div className={styles["editor-prodict-img"]}>
-          <Image
-            src={product.image}
-            layout="fill"
-            objectFit="cover"
-            alt="product"
-          />
-        </div>
-
-        <div className={styles["editor-rating"]}>
-          <b>{product.rating} &nbsp;</b>
-          <RatingStar total={TOTAL_RATING} rate={product.rating} />
-          <span>&nbsp;({TOTAL_VOTERS})</span>
-        </div>
-
-        <b>{product.name}</b>
-        <p>{product.description}</p>
+        <ProductCard
+          image={product.image}
+          rating={product.rating}
+          name={product.name}
+          description={product.description}
+        />
       </div>
     </div>
   );

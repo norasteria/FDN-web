@@ -10,6 +10,8 @@ import type { MenuData } from "_components/compounds/Navbar";
 import Section from "_components/compounds/Section";
 import EditorCard from "_components/compounds/EditorCard";
 import ArticleThumbnail from "_components/compounds/ArticleThumnail";
+import type { ProductCardProps } from "_components/compounds/ProductCard";
+import ProductCard from "_components/compounds/ProductCard";
 import ReviewCard from "_components/compounds/ReviewCard";
 import bannerImage from "_images/banner.png";
 import HomeWrapper from "_pages/partials/home/wrapper";
@@ -34,17 +36,12 @@ import skIIImg from "_images/sk-ii.png";
 import maybellineImg from "_images/maybelline.png";
 import innisfreeImg from "_images/innisfree.png";
 import dummyAvatar from "_images/dummy-avatar.png";
+import { POPULAR_GROUPS_DATA, PRODUCT_DATA } from "_constants/mock";
 
 // VIDEO THUMBNAILS
 import thumbnail1Img from "_images/videoThumbnail/thumbnail-1.png";
 import thumbnail2Img from "_images/videoThumbnail/thumbnail-2.png";
 import thumbnail3Img from "_images/videoThumbnail/thumbnail-3.png";
-
-// POPULAR GROUPS
-import group1Img from "_images/popularGroup/group-1.png";
-import group2Img from "_images/popularGroup/group-2.png";
-import group3Img from "_images/popularGroup/group-3.png";
-import group4Img from "_images/popularGroup/group-4.png";
 
 const HOME_MENUS: MenuData[] = [
   { text: "SKINCARE" },
@@ -64,13 +61,6 @@ const TOP_BRAND_DATA: StaticImageData[] = [
   skIIImg,
   maybellineImg,
   innisfreeImg,
-];
-
-const POPULAR_GROUPS_DATA: StaticImageData[] = [
-  group1Img,
-  group2Img,
-  group3Img,
-  group4Img,
 ];
 
 export interface HomePageProps {
@@ -96,6 +86,26 @@ const Home: NextPage<HomePageProps> = ({ dashboard }) => {
               username={data.user}
               userAvatar={dummyAvatar}
             />
+          ))}
+        </div>
+      );
+    },
+    []
+  );
+
+  const renderProductCarouselItem = useCallback(
+    (product: ProductCardProps[]) => {
+      return (
+        <div className={style["product-carousel-item-wrapper"]}>
+          {product.map((data, index) => (
+            <div key={index} className={style["product-carousel-item"]}>
+              <ProductCard
+                name={data.name}
+                description={data.description}
+                image={data.image}
+                rating={data.rating}
+              />
+            </div>
           ))}
         </div>
       );
@@ -269,6 +279,11 @@ const Home: NextPage<HomePageProps> = ({ dashboard }) => {
           title="Trending This Week"
           subtitle="See our weekly mots reviewed products"
           more
+        />
+
+        <Carousel<ProductCardProps[]>
+          data={grouppedArray(PRODUCT_DATA, 6)}
+          renderItem={renderProductCarouselItem}
         />
 
         <Section title="Top Brands" subtitle="We all know and love" more />
