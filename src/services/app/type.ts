@@ -1,4 +1,4 @@
-import { createAction, createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import { DashboardDataResponseDTO } from "_services/app/dto";
 import { getDashboardDataAction } from "_services/app/action";

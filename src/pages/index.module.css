@@ -1,3 +1,15 @@
 .latest-review-wrapper {
     width: calc(100% - 400px);
 }
+
+.top-brand-img-wrapper {
+    height: 60px;
+    width: 130px;
+    position: relative;
+}
+
+.latest-review-carousel-item {
+    min-width: 700px;
+    display: flex;
+    justify-content: space-between;
+}

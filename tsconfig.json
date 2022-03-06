@@ -14,6 +14,7 @@
     "paths": {
       "_components/*": ["./src/components/*"],
       "_constants/*": ["./src/constants/*"],
+      "_helpers/*": ["./src/helpers/*"],
       "_hooks/*": ["./src/hooks/*"],
       "_icons/*": ["./public/icons/*"],
       "_images/*": ["./public/images/*"],

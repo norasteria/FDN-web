@@ -1,0 +1,73 @@
+.review-container {
+    max-width: 330px;
+}
+.card-wrapper {
+    border: 1px solid #e9e9e9;
+    padding: 22px 15px 30px 15px;
+    border-radius: 8px;
+}
+
+.image {
+    width: 45px;
+    height: 60px;
+    margin-right: 35px;
+    position: relative;
+}
+
+.title {
+    font-size: 12px;
+}
+
+.title-wrapper {
+    margin-bottom: 10px;
+    padding: 0px 20px 15px;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+}
+
+.title > p {
+    font-weight: 600;
+    margin: 0;
+}
+
+.review-rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color:#e9e9e9;
+    font-size: 10px;
+}
+
+.comment {
+    font-size: 10px;
+}
+
+.profile-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-avatar-wrapper {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    overflow: hidden;
+    margin-top: -25px;
+}
+
+.profile-container > p {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 12px 0;
+}
+
+.profile-container > span {
+    font-size: 10px;
+    color: #c9c9c9;
+}

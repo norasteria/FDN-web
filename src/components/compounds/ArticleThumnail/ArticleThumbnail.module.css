@@ -1,0 +1,24 @@
+.container {
+    margin-bottom: 75px;
+    width: 350px;
+}
+
+.title {
+    margin: 30px 0;
+    overflow-wrap: break-word;
+}
+
+.thumbnail-wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+    height: 180px;
+    width: 350px;
+}
+
+.info {
+    font-size: 12px;
+}
+
+.info .time {
+    color: #c3c3c3;
+}

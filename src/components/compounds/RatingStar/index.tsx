@@ -9,7 +9,7 @@ export interface RatingStarProps {
 }
 
 const RatingStar: React.FC<RatingStarProps> = ({ total, rate }) => {
-  const roundedUpRate = Math.floor(rate);
+  const roundedDownRate = Math.floor(rate);
 
   return (
     <div>
@@ -20,7 +20,7 @@ const RatingStar: React.FC<RatingStarProps> = ({ total, rate }) => {
           height={15}
           width={15}
           src={
-            index + 1 <= roundedUpRate ? ratingStarActive : ratingStarInactive
+            index + 1 <= roundedDownRate ? ratingStarActive : ratingStarInactive
           }
         />
       ))}

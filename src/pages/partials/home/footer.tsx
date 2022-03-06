@@ -9,7 +9,7 @@ import twitterImg from "_icons/twitter.png";
 import instagramImg from "_icons/instagram.png";
 import youtubeImg from "_icons/youtube.png";
 
-const FOOTER_MENUS = [
+const FOOTER_MENUS: string[] = [
   "About Us",
   "Feedback",
   "Contanct",
@@ -20,7 +20,12 @@ const FOOTER_MENUS = [
   "Newsletter",
 ];
 
-const SOCIAL_MEDIA = [facebookImg, twitterImg, instagramImg, youtubeImg];
+const SOCIAL_MEDIA: StaticImageData[] = [
+  facebookImg,
+  twitterImg,
+  instagramImg,
+  youtubeImg,
+];
 
 const Footer: React.FC = () => {
   return (
